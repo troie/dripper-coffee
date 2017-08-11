@@ -1,63 +1,43 @@
 jQuery(document).ready(function ($) {
 
     getData();
-    var beep = document.getElementById('beep');
-    var clk = document.getElementById('clk');
-    var back = document.getElementById('back');
-    var loadFile = $(this).data('doc');
-
-    $(".menu").on("click", "li", function () {
-        clk.play();
-        getPage($(this).data('index'));
-    });
-
-    $(".menu").on("mouseenter", "li", function () {
-        beep.play();
-    });
-
-
-    $(".page").on("click", "h2", function () {
-        $(".page").html("");
-        getData();
-    });
-
-    $(".page").on("click", "li", function () {
-        clk.play();
-        getComment($(this).data('index'));
-
-    });
-    $(".comment").on("click", "div", function () {
-        back.play();
-        $(".comment").html("");
-        getPage();
-    });
-    $(".page").on("click", ".page_up", function () {
-        back.play();
-        $(".page").html("");
-        getData();
-    });
-
+    
     function getData() {
-        localStorage.removeItem('pageId');
-        localStorage.removeItem('title');
-        var url = "/js/main-page.json";
+//        localStorage.removeItem('pageId');
+//        localStorage.removeItem('title');
+        var url = "/js/bean.json";
 
 
         $.getJSON(url, function (data) {
-            var items = [];
-
+            var bean_data = [];
+            var page = imgCss = imageUrl = "";
             $.each(data, function (key, val) {
-                items.push("<li id=\"" + "item_" + key + "\" data-index=\"" + key + "\"><div><aside><i>Vol." + val.doc_vol + "</i><strong>" + val.title_en + "</strong><p>" + val.title_cn + "</p></aside><img src=\"img/doc_" + val.doc_vol + ".jpg\"></div></li>");
+              page += "<div class=\"card-square mdl-card mdl-shadow--2dp\">"+
+                    "<div class=\"mdl-card__title mdl-card--expand card_"+key+"\"><h2 class=\"mdl-card__title-text\">"+data[key].title_cn+"</h2></div>"+
+                    "<div class=\"mdl-card__supporting-text\">"+data[key].flavor_cn+"</div>"+
+                    "<div class=\"mdl-card__actions mdl-card--border\">"+
+                        "<button class=\"mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored\"><i class=\"material-icons\">local_cafe</i></button>"+
+                        "<strong>$20</strong>"+
+                    "</div>"+
+                "</div>";
+                imageUrl = "../img/"+data[key].imagee;
+                $( ".card_"+key ).css('background-image', 'url(' + imageUrl + ')');
             });
-
-            $("<ul/>", {
-                html: items.join(""),
-                id: "menu_item"
-            }).appendTo(".menu");
-
+            console.log(page)
+            $(page).appendTo("#container");
+            addBackground( data );
         });
     }
-
+    
+    function addBackground( data ) {
+        var  imageUrl = "";
+        $.each( data, function (key, val) {
+            imageUrl = "../img/"+data[key].image;
+            $( ".card_"+key ).css('background-image', 'url(' + imageUrl + ')');
+        });
+    }
+    
+    
     function getPage(pageId) {
         $(".menu").html("");
         if (!localStorage.getItem('pageId')) localStorage.setItem('pageId', pageId);
@@ -146,22 +126,6 @@ jQuery(document).ready(function ($) {
         });
         return items.join("");
     }
-    
-    var bean_datd = [];
-    $.ajax({
-        url: '/js/bean.json',
-        data: {
-            age: 20,
-            sex: 'man'
-        },
-        async: false,
-        dataType: 'json',
-        success: function (result) {
-            bean_datd = result.whatever;
-        }
-    });
-    console.log(bean_datd);
-    return bean_datd;
 
 
 });

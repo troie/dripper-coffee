@@ -1,46 +1,42 @@
 [
     {
-        "title_en": "耶加雪飞",
-        "title_cn": "yirgacheffe",
+        "title_cn": "耶加雪飞",
+        "title_en": "yirgacheffe",
+        "image": "yirgacheffe.jpg",
         "process_en": "washed",
         "process_cn": "水洗",
         "flavor_en":"jasmine, tea, citrus",
-        "flavor_cn":"茉莉花，红茶，柑桔",
+        "flavor_cn":"茉莉花香、柠檬、橙、酸甜平衡圆润",
         "price":"20"
     },
     {
-        "title_en": "耶加雪飞",
-        "title_cn": "yirgacheffe",
+        "title_cn": "西达摩",
+        "title_en": "sidamo",
+        "image": "sidamo.jpg",
         "process_en": "washed",
         "process_cn": "水洗",
-        "flavor_en":"jasmine, tea, citrus",
-        "flavor_cn":"茉莉花，红茶，柑桔",
+        "flavor_en":"Honey, grapefruit, maple sugar, wine, jasmine",
+        "flavor_cn":"蜂蜜，西柚，楓糖，紅酒，茉莉",
         "price":"20"
     },
     {
-        "title_en": "耶加雪飞",
-        "title_cn": "yirgacheffe",
+        "title_cn": "哥斯达黎加",
+        "title_en": "costa rica",
+        "image": "costarica.jpg",
         "process_en": "washed",
         "process_cn": "水洗",
-        "flavor_en":"jasmine, tea, citrus",
-        "flavor_cn":"茉莉花，红茶，柑桔",
+        "flavor_en":"apple, wine, chocolate, Honey",
+        "flavor_cn":"蘋果，红酒，巧克力，蜂蜜",
         "price":"20"
     },
     {
-        "title_en": "耶加雪飞",
-        "title_cn": "yirgacheffe",
+        "title_cn": "哥伦比亚",
+        "title_en": "colombia san agustin",
+        "image": "yirgacheffe.jpg",
         "process_en": "washed",
         "process_cn": "水洗",
-        "flavor_en":"jasmine, tea, citrus",
-        "flavor_cn":"茉莉花，红茶，柑桔",
-        "price":"20"
-    },{
-        "title_en": "耶加雪飞",
-        "title_cn": "yirgacheffe",
-        "process_en": "washed",
-        "process_cn": "水洗",
-        "flavor_en":"jasmine, tea, citrus",
-        "flavor_cn":"茉莉花，红茶，柑桔",
+        "flavor_en":"Chocolate, caramel, berry, caramel, corn, gold sugar",
+        "flavor_cn":"巧克力，焦糖，莓果，焦糖，玉米，黃金糖",
         "price":"20"
     }
 
