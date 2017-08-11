@@ -58,7 +58,8 @@ textarea {
    ========================================================================== */
 @import url(//fonts.googleapis.com/earlyaccess/cwtexyen.css);
 body{font-family: 'Montserrat', sans-serif;}
-
+.title{font-family: 'Montserrat', sans-serif;font-weight: 600;letter-spacing: .1em;}
+#container{padding-top: 3em;}
 .card-square h2{font-family: 'cwTeXYen', sans-serif;font-weight: 600;color: #fff;text-shadow: 0 1px 0 #222;}
 .card-square.mdl-card {
   width: 320px;
