@@ -1,4 +1,134 @@
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,time, mark, audio, video {margin: 0;padding: 0;border: 0;font-size: 100%;font: inherit;vertical-align: baseline;}article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block;}body {line-height: 1;}ol, ul {list-style: none;}blockquote, q {quotes: none;}blockquote:before, blockquote:after,q:before, q:after {content: '';content: none;}table {border-collapse: collapse;border-spacing: 0;}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
 /*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
 
 html {
@@ -56,56 +186,82 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+
 @import url(//fonts.googleapis.com/earlyaccess/cwtexyen.css);
-body{font-family: 'Montserrat', sans-serif;}
-.title{font-family: 'Montserrat', sans-serif;font-weight: 600;letter-spacing: .1em;}
-#container{padding-top: 3em;}
-.card-square h2{font-family: 'cwTeXYen', sans-serif;font-weight: 600;color: #fff;text-shadow: 0 1px 0 #222;}
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.header {
+    background: #99ffee;
+    background: #222;
+    color: #99ffee;
+}
+
+.title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    letter-spacing: .1em;
+}
+
+.card-square h2 {
+    font-family: 'cwTeXYen', sans-serif;
+    font-weight: 600;
+    color: #fff;
+    text-shadow: 0 1px 0 #222;
+}
+
 .card-square.mdl-card {
-  width: 320px;
-  height: 320px;
+    width: 320px;
+    height: 320px;
     margin: 30px auto;
 }
+
+.card {
+    background-color: #99ffee;
+    background-repeat: none;
+}
+
+
 /*
-.card_1{
-  color: #fff;
-  background:url('../img/yirgacheffe.jpg') bottom right 15% no-repeat #46B6AC;
+.card_1 {
+    color: #fff;
+    background: url('../img/yirgacheffe.jpg') bottom right 15% no-repeat #46B6AC;
 }
 */
-.mdl-button--fab.mdl-button--colored{}
-.mdl-card--border strong{font-family: 'Montserrat', sans-serif;position: absolute;
-    font-size: 3em;
+
+
+/*.mdl-button--fab.mdl-button--colored {}*/
+
+.mdl-card--border strong {
+    font-family: 'Roboto', sans-serif;
+    ;
+    /*    position: absolute;*/
+    font-size: 2em;
     right: 0;
     bottom: 0;
-    color: #ccc;}
+    color: #FF6B7C;
+}
 
-
-
-
-
-
-
-
-
-
-
-
+.mdl-button--colored.buy-it {
+    position: absolute;
+    right: 1em;
+    bottom: 9px;
+    background: #FF6B7C;
+    color: #99ffee;
+}
 
 
 /* ==========================================================================
    Media Queries
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-
-}
+@media only screen and (min-width: 35em) {}
 
 @media print,
-       (-o-min-device-pixel-ratio: 5/4),
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 120dpi) {
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 120dpi) {}
 
-}
 
 /* ==========================================================================
    Helper classes
@@ -155,6 +311,7 @@ body{font-family: 'Montserrat', sans-serif;}
     *zoom: 1;
 }
 
+
 /* ==========================================================================
    Print styles
    ========================================================================== */
@@ -165,54 +322,45 @@ body{font-family: 'Montserrat', sans-serif;}
     *:after {
         background: transparent !important;
         color: #000 !important;
+        -webkit-box-shadow: none !important;
         box-shadow: none !important;
         text-shadow: none !important;
     }
-
     a,
     a:visited {
         text-decoration: underline;
     }
-
     a[href]:after {
         content: " (" attr(href) ")";
     }
-
     abbr[title]:after {
         content: " (" attr(title) ")";
     }
-
     a[href^="#"]:after,
     a[href^="javascript:"]:after {
         content: "";
     }
-
     pre,
     blockquote {
         border: 1px solid #999;
         page-break-inside: avoid;
     }
-
     thead {
         display: table-header-group;
     }
-
     tr,
     img {
         page-break-inside: avoid;
     }
-
     img {
         max-width: 100% !important;
     }
-
     p,
     h2,
     h3 {
         orphans: 3;
         widows: 3;
     }
-
     h2,
     h3 {
         page-break-after: avoid;
