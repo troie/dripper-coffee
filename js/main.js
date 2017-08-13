@@ -19,10 +19,8 @@ jQuery(document).ready(function ($) {
                     "<button class=\"mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored buy-it\"><i class=\"material-icons\">local_cafe</i></button>" +
                     "</div>" +
                     "</div>";
-                imageUrl = "../img/" + data[key].imagee;
-                $(".card_" + key).css('background-image', 'url(' + imageUrl + ')');
             });
-            console.log(page)
+            //            console.log(page)
             $(page).appendTo(".page-content");
             addBackground(data);
         });
@@ -31,7 +29,7 @@ jQuery(document).ready(function ($) {
     function addBackground(data) {
         var imageUrl = "";
         $.each(data, function (key, val) {
-            imageUrl = "../img/" + data[key].image;
+                        imageUrl = "../img/" + data[key].image;
             $(".card_" + key).css('background-image', 'url(' + imageUrl + ')');
         });
     }
